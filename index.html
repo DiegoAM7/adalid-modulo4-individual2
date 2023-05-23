@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="./src/public/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vite App</title>
+	</head>
+	<body>
+		<main class="container pt-5">
+			<div class="row gx-5">
+				<section class="col">
+					<form id="btnAgregarProveedor">
+						<div class="form-floating mb-3">
+							<input
+								class="form-control"
+								type="text"
+								name="nombreProveedor"
+								id="nombreProveedor"
+								placeholder="Nombre Proveedor"
+								required
+							/>
+							<label for="nombreProveedor">Nombre Proveedor</label>
+						</div>
+
+						<div class="form-floating mb-3">
+							<input
+								class="form-control"
+								type="email"
+								name="emailProveedor"
+								id="emailProveedor"
+								placeholder="Email Proveedor"
+								required
+							/>
+							<label for="emailProveedor">Email Proveedor</label>
+						</div>
+
+						<div class="form-floating mb-3">
+							<input
+								class="form-control"
+								type="text"
+								name="telefonoProveedor"
+								id="telefonoProveedor"
+								placeholder="Telefono Proveedor"
+								required
+							/>
+							<label for="telefonoProveedor">Telefono Proveedor</label>
+						</div>
+
+						<button class="btn btn-success" type="submit">
+							Agregar Proveedor
+						</button>
+					</form>
+				</section>
+
+				<section class="col">
+					<form id="btnAgregarArticulo">
+						<div class="form-floating mb-3">
+							<select class="form-select" name="idProveedor" id="idProveedor">
+								<option disabled selected value="0">
+									Seleccione un proveedor
+								</option>
+							</select>
+							<label for="idProveedor">Seleccione un proveedor</label>
+						</div>
+
+						<div class="form-floating mb-3">
+							<input
+								class="form-control"
+								type="text"
+								name="nombreArticulo"
+								id="nombreArticulo"
+								placeholder="Nombre Artículo"
+								required
+							/>
+							<label for="nombreArticulo">Nombre Articulo</label>
+						</div>
+
+						<div class="form-floating mb-3">
+							<input
+								class="form-control"
+								type="number"
+								name="precioArticulo"
+								id="precioArticulo"
+								placeholder="Precio Artículo"
+								required
+							/>
+							<label for="precioArticulo">Precio Artículo</label>
+						</div>
+
+						<button class="btn btn-success" type="submit">
+							Agregar Artículo
+						</button>
+					</form>
+				</section>
+			</div>
+
+			<table id="tabla" class="table mt-5"></table>
+		</main>
+		<script src="./src/assets/js/bootstrap.bundle.min.js"></script>
+		<script type="module" src="./src/main.js"></script>
+	</body>
+</html>
